@@ -4,15 +4,26 @@
     font-family: Verdana;
 }
 
+#wrap {
+    width: 100%;
+    min-width:768px;
+}
+
 header {
     width: 100%;
     height: 80px;
     position: relative;
 }
 
+.header-cont {
+    position:fixed;
+    width:100%;
+    height: 80px;
+}
+
 #logo {
     float: left;
-    width: 30%;
+    width: 22%;
     position: relative;
 }
 
@@ -23,10 +34,15 @@ header {
 #logo img {
     padding-top:8px;
     padding-left:8px;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
-#logo p {
+#logo span {
+    color: #212121;
+    position: absolute; 
+    padding-top:8px;
+    left:60px;
+    top: 14.5px;
     font-size: 26px;
 }
 
@@ -34,7 +50,7 @@ nav {
     vertical-align: bottom;
     display: inline-block;
     float:right;
-    width: 70%;
+    width: 78%;
     height: 25px;
     position: absolute; 
     bottom: 0; 
@@ -48,6 +64,7 @@ nav ul {
 }
 
 nav ul li {
+    color: #212121;
     text-decoration: none;
     text-align: center;
     vertical-align: center;
@@ -61,31 +78,95 @@ nav ul li {
 
 #content{
     width:100%;
+    display:table;
     height: -calc(100vh - 160px);
     height: -webkit-calc(100vh - 160px);
     height: -moz-calc(100vh - 160px);
     height: -o-calc(100vh - 160px);
 }
 
+.row{
+    display:table-row;
+}
+
 #main {
+    padding-bottom:5px;
     height: 100%;
-    width: 80%;
-    float: right;
+    width: 78%;
 }
 
 #bar {
+    width: 22%;
     height: 100%;
-    width: 20%;
-    float: left;
+}
+
+section {
+    display: table-cell;
 }
 
 footer {
     height: 80px;
     width: 100%;
+    text-align: center;
+    display:block;
+}
+
+footer h6 {
+    color: #212121;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#bar * {
+    color: #212121;
+}
+
+#bar h3 {
+    text-align:center;
+    padding-right:5px;
+}
+
+#bar p{
+    padding-right:8px;
+    padding-left:8px;
+    padding-bottom:10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.article {
+    background: #CFD8DC;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: block;
+    border: 1px solid #B6B6B6;
+    overflow: auto;
+}
+
+.article *{
+    color: #212121;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.article p {
+    padding-left:20px;
+    padding-right:20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.article h5{
+    display:block;
+    padding-bottom:5px;
+    padding-right:5px;
+    float:right;
 }
 
 .active{
-    background: #00BCD4;
+    background: #607D8B;
+    color: #212121;
 }
 
 .not-active:hover{

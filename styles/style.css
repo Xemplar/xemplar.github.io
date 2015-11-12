@@ -13,6 +13,7 @@ header {
     width: 100%;
     height: 80px;
     position: relative;
+    overflow: auto;
 }
 
 .header-cont {
@@ -23,8 +24,11 @@ header {
 
 #logo {
     float: left;
+    height:100%;
     width: 22%;
     position: relative;
+    border-bottom:5px solid #455A64;
+    border-right:1px solid #455A64;
 }
 
 #logo * {
@@ -64,17 +68,51 @@ nav ul {
 }
 
 nav ul li {
-    color: #212121;
-    text-decoration: none;
     text-align: center;
     vertical-align: center;
     display: inline-block;
     height: 100%;
-    width: -calc(20%);
-    width: -webkit-calc(20%);
-    width: -moz-calc(20%);
-    width: -o-calc(20%);
+    width: 20%;
 }
+
+nav ul li a{
+    color: #212121;
+    text-decoration: none;
+}
+
+nav ul li:hover{
+    padding-bottom:5px;
+    box-shadow: 2px 2px;
+}
+
+nav ul li:hover + .more-info{
+    display: block;
+    box-shadow: 2px 2px;
+}
+
+.more-info:hover {
+    display: block;
+}
+
+.more-info {
+    position:absolute;
+    text-align: center;
+    vertical-align: center;
+    border: 1px solid #B6B6B6;
+    padding: 5px 5px 5px 5px;
+    display: none;
+    color: #212121;
+    width: -calc(20% - 12px);
+    width: -webkit-calc(20% - 12px);
+    width: -moz-calc(20% - 12px);
+    width: -o-calc(20% - 12px);
+    min-height: 25px;
+}
+
+.more-info p{
+    text-align: justify;
+    text-justify: inter-word;
+}  
 
 #content{
     width:100%;
@@ -136,12 +174,13 @@ footer h6 {
 
 .article {
     background: #CFD8DC;
-    margin-right: 5px;
+    margin-right: 7px;
     margin-left: 5px;
     margin-top: 5px;
     display: block;
     border: 1px solid #B6B6B6;
     overflow: auto;
+    box-shadow: 2px 2px;
 }
 
 .article *{

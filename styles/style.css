@@ -92,6 +92,8 @@ nav ul li:hover + .more-info{
 
 .more-info:hover {
     display: block;
+    padding-top:10px;
+    box-shadow: 2px 2px 5px black;
 }
 
 .more-info {
